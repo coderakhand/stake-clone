@@ -31,7 +31,7 @@ export default function SideBar() {
           size={"lg"}
           className="relative bg-cover bg-[url(https://stake.com/_app/immutable/assets/default-casino-mini.CQlEkEv9.svg)] hover:bg-[url(https://stake.com/_app/immutable/assets/default-sports-mini.BJ4yNOA9.svg)]"
         >
-            <div className="absolute w-full h-full rounded-sm hover:bg-green-400/60 "></div>
+          <div className="absolute w-full h-full rounded-sm hover:bg-green-400/60 "></div>
           <TbCardsFilled className="w-8 h-8 text-muted" />
         </Button>
 
@@ -88,7 +88,7 @@ export default function SideBar() {
         </Button>
 
         <div className="w-full flex justify-center">
-          <hr className="bg-foreground h-[2px] w-6"></hr>
+          <hr className="bg-[#2F4453] h-[2px] w-6"></hr>
         </div>
 
         <Button className="w-full" variant={"sideIcon"}>

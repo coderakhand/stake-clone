@@ -1,4 +1,11 @@
 import Image from "next/image";
+import { IoLogoFacebook } from "react-icons/io";
+import { RiInstagramFill } from "react-icons/ri";
+import { RiTwitterXLine } from "react-icons/ri";
+import { FaYoutube } from "react-icons/fa";
+import { FaCartShopping } from "react-icons/fa6";
+import { FaNewspaper } from "react-icons/fa6";
+import { TiMessages } from "react-icons/ti";
 
 const footerList = [
   {
@@ -76,14 +83,14 @@ const footerList = [
 
 export default function Footer() {
   return (
-    <div className="flex flex-col gap-3">
-      <div className="flex justify-center gap-6">
+    <div className="flex flex-col gap-7">
+      <div className="flex justify-center gap-8">
         {footerList.map((footerItem, idx) => (
           <div key={idx} className="flex flex-col gap-2">
             <div className="font-bold text-white">{footerItem.name}</div>
             <div className="flex flex-col gap-0.5">
               {footerItem.items.map((item, idx) => (
-                <div key={idx} className="text-muted font-semibold text-xs">
+                <div key={idx} className="text-muted font-medium text-sm">
                   {item}
                 </div>
               ))}
@@ -91,7 +98,15 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div></div>
+      <div className="w-full flex justify-end gap-2 text-white">
+        <FaNewspaper />
+        <TiMessages />
+        <IoLogoFacebook />
+        <RiTwitterXLine />
+        <RiInstagramFill />
+        <FaYoutube />
+        <FaCartShopping />
+      </div>
       <hr className="h-4 text-muted" />
       <div className="text-muted text-xs font-medium">
         <p className="">© 2025 Stake.com | All Rights Reserved.</p>
@@ -108,7 +123,9 @@ export default function Footer() {
         <p className="mt-2 text-muted font-bold">
           This is not official website of stake. It is created with educational
           purpose only. The creator of this website is{" "}
-          <a href="https://www.coderakhand.xyz" className="text-white">coderakhand</a>
+          <a href="https://www.coderakhand.xyz" className="text-white">
+            coderakhand
+          </a>
         </p>
       </div>
       <div className="w-full flex flex-col items-center py-4">

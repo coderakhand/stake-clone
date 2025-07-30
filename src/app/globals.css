@@ -48,4 +48,5 @@
   --background: rgb(26, 44, 56);
   --foreground: rgb(44, 65, 80);
   --muted: rgb(177, 186, 211);
+  --secondary-foreground: #2A3B48;
 }
