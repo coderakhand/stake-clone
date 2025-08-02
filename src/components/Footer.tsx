@@ -84,7 +84,7 @@ const footerList = [
 export default function Footer() {
   return (
     <div className="flex flex-col gap-7">
-      <div className="flex justify-center gap-10">
+      <div className="flex justify-center gap-10 max-md:hidden">
         {footerList.map((footerItem, idx) => (
           <div key={idx} className={`flex flex-col gap-2 ${idx == 2 ? "lg:ml-12" : idx == 3 ? "lg:mr-12" : ""}`}>
             <div className="font-bold text-white">{footerItem.name}</div>
@@ -98,7 +98,7 @@ export default function Footer() {
           </div>
         ))}
       </div>
-      <div className="w-full flex justify-end gap-2 text-white">
+      <div className="w-full flex justify-around md:justify-end gap-2 text-white">
         <FaNewspaper />
         <TiMessages />
         <IoLogoFacebook />

@@ -48,10 +48,10 @@ export default function FAQSection() {
   ];
 
   return (
-    <section className="px-6 w-full bg-background text-white">
+    <section className="md:px-6 w-full bg-background text-white">
       <div className="max-w-4xl mb-4">
         <motion.p
-          className="flex items-center text-xl font-bold mb-4"
+          className="flex items-center text-lg sm:text-xl font-bold mb-4"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -73,7 +73,7 @@ export default function FAQSection() {
               value={`item-${index}`}
               className="bg-[#213643] rounded-sm overflow-hidden mb-2 border-none shadow-md"
             >
-              <AccordionTrigger className="text-left text-sm font-bold hover:no-underline h-12 flex items-center px-3 cursor-pointer">
+              <AccordionTrigger className="text-left text-xs sm:text-sm font-semibold sm:font-bold hover:no-underline h-8 sm:h-12 flex items-center px-3 cursor-pointer">
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="px-3 font-medium  text-xs text-muted whitespace-pre-line">

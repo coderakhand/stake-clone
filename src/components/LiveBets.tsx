@@ -69,23 +69,23 @@ const liveBets = [
 
 export default function LiveBets() {
   return (
-    <div className="flex flex-col gap-3 px-4">
-      <div className="max-w-[470px] flex gap-2 items-center justify-center bg-[#0F212D] rounded-full h-14 px-1 my-4">
+    <div className="flex flex-col gap-1 smd:gap-3 md:px-4">
+      <div className="w-full smd:max-w-[470px] flex justify-around smd:gap-2 items-center smd:justify-center bg-[#0F212D] rounded-full h-12 smd:h-14 px-1 my-1 smd:my-4">
         <Button
           size="lg"
-          className="font-bold text-white bg-foreground hover:bg-foreground rounded-full h-12"
+          className="font-bold text-white bg-foreground hover:bg-foreground rounded-full h-10 smd:h-12"
         >
           Casino Bets
         </Button>
         <Button
           size="lg"
-          className="font-bold text-white hover:bg-foreground rounded-full h-12"
+          className="font-bold text-white hover:bg-foreground rounded-full h-10 smd:h-12"
         >
           Sports Bets
         </Button>
         <Button
           size="lg"
-          className="font-bold text-white hover:bg-foreground rounded-full h-12 flex items-center gap-1"
+          className="max-smd:hidden font-bold text-white hover:bg-foreground rounded-full h-12 flex items-center gap-1"
         >
           Race Leaderboard
           <span className="bg-[#1DFF21] w-2 h-2 rounded-full inline-block"></span>
@@ -96,10 +96,12 @@ export default function LiveBets() {
           <thead>
             <tr className="text-white text-sm font-bold">
               <th className="px-3 py-2 rounded-l-lg text-left">Game</th>
-              <th className="px-3 py-2 text-left">User</th>
-              <th className="px-3 py-2 text-left">Time</th>
-              <th className="px-3 py-2 text-right">Bet Amount</th>
-              <th className="px-3 py-2 text-right">Multiplier</th>
+              <th className="max-sm:hidden px-3 py-2 text-left">User</th>
+              <th className="max-lg:hidden px-3 py-2 text-left">Time</th>
+              <th className="max-md:hidden px-3 py-2 text-right">Bet Amount</th>
+              <th className="max-smd:hidden px-3 py-2 text-right">
+                Multiplier
+              </th>
               <th className="px-3 py-2 rounded-r-lg text-right">Payout</th>
             </tr>
           </thead>
@@ -109,18 +111,26 @@ export default function LiveBets() {
                 key={idx}
                 className={`${
                   idx % 2 ? "bg-[#213643]" : "bg-background"
-                } text-muted font-medium text-sm`}
+                } text-muted font-medium text-xs smd:text-sm`}
               >
-                <td className="px-3 py-2 rounded-l-sm text-left font-semibold text-white/90">{bet.game}</td>
-                <td className="px-3 py-2 text-left">{bet.user}</td>
-                <td className="px-3 py-2 text-left">{bet.time}</td>
-                <td className="px-3 py-2 text-right whitespace-nowrap">
+                <td className="px-3 py-2 rounded-l-sm text-left font-semibold text-white/90">
+                  {bet.game}
+                </td>
+                <td className="max-sm:hidden px-3 py-2 text-left">
+                  {bet.user}
+                </td>
+                <td className="max-lg:hidden px-3 py-2 text-left">
+                  {bet.time}
+                </td>
+                <td className="max-md:hidden px-3 py-2 text-right whitespace-nowrap">
                   <span className="inline-flex items-center gap-1">
                     {bet.amount}
                     <Image src={bet.coin} width={14} height={14} alt="" />
                   </span>
                 </td>
-                <td className="px-3 py-2 text-right">{bet.multiplier}</td>
+                <td className="max-smd:hidden px-3 py-2 text-right">
+                  {bet.multiplier}
+                </td>
                 <td
                   className={`px-3 py-2 rounded-r-sm font-bold text-right whitespace-nowrap ${
                     bet.payout.startsWith("-") ? "text-muted" : "text-[#1DFF21]"

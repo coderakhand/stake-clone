@@ -5,7 +5,7 @@ export default function TrendingGamesSection() {
   return (
     <GamesCard
       heading="Trending Games"
-      logo={<TbCardsFilled className="w-8 h-8 text-muted" />}
+      logo={<TbCardsFilled className="w-5 h-5 smd:w-8 smd:h-8 text-muted" />}
       cardList={[
         "https://mediumrare.imgix.net/73754d4bf421b78fbd3895bbc7890d379797588cb699d6cbe47f3656aa93613b?w=360&h=472&fit=min&auto=format",
         "https://mediumrare.imgix.net/631492c465b7163dbb1218accdde2ea5c86ce4989556d82e0fb7c38039823343?w=360&h=472&fit=min&auto=format",
@@ -18,6 +18,6 @@ export default function TrendingGamesSection() {
         "https://mediumrare.imgix.net/73318f9e220e1637c4b11338d10f377cd997d0232636f5f5a1940167ad0451cd?w=360&h=472&fit=min&auto=format",
         "https://mediumrare.imgix.net/383f81d1bf236a963e6b58484ec95049a8574003b25f03cc0fbd5757b6a26bd8?w=360&h=472&fit=min&auto=format",
       ]}
-    ></GamesCard>
+    />
   );
 }
