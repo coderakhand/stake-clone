@@ -108,17 +108,16 @@ export default function LiveBets() {
               <tr
                 key={idx}
                 className={`${
-                  idx % 2 ? "bg-[#11202c]" : "bg-background"
-                } text-muted font-semibold text-sm`}
+                  idx % 2 ? "bg-[#213643]" : "bg-background"
+                } text-muted font-medium text-sm`}
               >
-                <td className="px-3 py-2 rounded-l-sm text-left">{bet.game}</td>
+                <td className="px-3 py-2 rounded-l-sm text-left font-semibold text-white/90">{bet.game}</td>
                 <td className="px-3 py-2 text-left">{bet.user}</td>
                 <td className="px-3 py-2 text-left">{bet.time}</td>
                 <td className="px-3 py-2 text-right whitespace-nowrap">
-                  {/* wrap the flex just for icon and amount together */}
                   <span className="inline-flex items-center gap-1">
                     {bet.amount}
-                    <Image src={bet.coin} width={16} height={16} alt="" />
+                    <Image src={bet.coin} width={14} height={14} alt="" />
                   </span>
                 </td>
                 <td className="px-3 py-2 text-right">{bet.multiplier}</td>
@@ -129,7 +128,7 @@ export default function LiveBets() {
                 >
                   <span className="inline-flex items-center gap-1">
                     {bet.payout}
-                    <Image src={bet.coin} width={16} height={16} alt="" />
+                    <Image src={bet.coin} width={14} height={14} alt="" />
                   </span>
                 </td>
               </tr>

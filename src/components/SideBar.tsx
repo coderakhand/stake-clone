@@ -21,7 +21,7 @@ import { LuAlignJustify } from "react-icons/lu";
 
 export default function SideBar() {
   return (
-    <div className="flex flex-col gap-3 w-[54px] lg:h-screen bg-[#0F212D]">
+    <div className="hidden  md:flex md:flex-col gap-3 w-[54px] lg:h-screen bg-[#0F212D]">
       <button className="w-full flex justify-center items-center h-[60px] bg-[#0F212E]/80 shadow-md">
         <LuAlignJustify className="w-6 h-6 text-muted stroke-3" />
       </button>
@@ -42,90 +42,108 @@ export default function SideBar() {
           <FaBasketball className="w-5 h-5 text-muted" />
         </Button>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <FaGift className="w-5 h-5 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Promotion
+          </HoverCardContent>
+        </HoverCard>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <TbAffiliateFilled className="w-6 h-6 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Affiliate
+          </HoverCardContent>
+        </HoverCard>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <HiMiniTrophy className="w-5 h-5 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            VIP Club
+          </HoverCardContent>
+        </HoverCard>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <FaRegNewspaper className="w-5 h-5 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Blog
+          </HoverCardContent>
+        </HoverCard>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <BiSolidMessageRoundedDots className="w-6 h-6 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Forum
+          </HoverCardContent>
+        </HoverCard>
 
         <div className="w-full flex justify-center">
           <hr className="bg-[#2F4453] h-[2px] w-6"></hr>
         </div>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <FaHandshake className="w-5 h-5 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Sponsorship
+          </HoverCardContent>
+        </HoverCard>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <IoShieldHalf className="w-5 h-5 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Responsible Gambling
+          </HoverCardContent>
+        </HoverCard>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <RiCustomerServiceFill className="w-5 h-5 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Live Support
+          </HoverCardContent>
+        </HoverCard>
 
-        <Button className="w-full" variant={"sideIcon"}>
-          <HoverCard>
-            <HoverCardTrigger>
+        <HoverCard>
+          <HoverCardTrigger>
+            <Button className="w-full" variant={"sideIcon"}>
               <IoIosGlobe className="w-5 h-5 text-muted" />
-            </HoverCardTrigger>
-            <HoverCardContent></HoverCardContent>
-          </HoverCard>
-        </Button>
+            </Button>
+          </HoverCardTrigger>
+          <HoverCardContent className="bg-white z-50 ml-1 mt-1 p-2 rounded-xs text-xs font-bold">
+            Languages: English
+          </HoverCardContent>
+        </HoverCard>
       </div>
     </div>
   );

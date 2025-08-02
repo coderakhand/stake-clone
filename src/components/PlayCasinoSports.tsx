@@ -1,11 +1,16 @@
+"use client";
 import Image from "next/image";
 import { FaBasketball } from "react-icons/fa6";
 import { TbCardsFilled } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 export default function PlayCasinoSports() {
   return (
     <div className="flex gap-3">
-      <div className="h-[240px] flex flex-col  rounded-sm overflow-hidden">
+      <motion.div
+        whileHover={{ translateY: "-10px", transition: { duration: 0.3 } }}
+        className="h-[240px] flex flex-col  rounded-sm overflow-hidden cursor-pointer"
+      >
         <div className="pt-0.5 px-0.5 bg-gradient-to-b from-blue-500/80 via-blue-500/40 to-transparent">
           <Image
             height={300}
@@ -24,9 +29,12 @@ export default function PlayCasinoSports() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="h-[240px] flex flex-col rounded-sm overflow-hidden">
+      <motion.div
+        whileHover={{ translateY: "-10px", transition: { duration: 0.3 } }}
+        className="h-[240px] flex flex-col rounded-sm overflow-hidden cursor-pointer"
+      >
         <div className="pt-0.5 px-0.5 bg-gradient-to-b from-green-500/80 via-green-500/40 to-transparent">
           <Image
             height={300}
@@ -45,7 +53,7 @@ export default function PlayCasinoSports() {
             </p>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

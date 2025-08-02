@@ -84,13 +84,13 @@ const footerList = [
 export default function Footer() {
   return (
     <div className="flex flex-col gap-7">
-      <div className="flex justify-center gap-8">
+      <div className="flex justify-center gap-10">
         {footerList.map((footerItem, idx) => (
-          <div key={idx} className="flex flex-col gap-2">
+          <div key={idx} className={`flex flex-col gap-2 ${idx == 2 ? "lg:ml-12" : idx == 3 ? "lg:mr-12" : ""}`}>
             <div className="font-bold text-white">{footerItem.name}</div>
             <div className="flex flex-col gap-0.5">
               {footerItem.items.map((item, idx) => (
-                <div key={idx} className="text-muted font-medium text-sm">
+                <div key={idx} className="text-muted font-semibold text-sm">
                   {item}
                 </div>
               ))}
@@ -122,7 +122,7 @@ export default function Footer() {
         </p>
         <p className="mt-2 text-muted font-bold">
           This is not official website of stake. It is created with educational
-          purpose only. The creator of this website is{" "}
+          purpose only. The developer of this website is{" "}
           <a href="https://www.coderakhand.xyz" className="text-white">
             coderakhand
           </a>
